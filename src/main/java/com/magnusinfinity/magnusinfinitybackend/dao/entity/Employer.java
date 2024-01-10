@@ -7,7 +7,6 @@ import lombok.Data;
 import org.springframework.data.annotation.Id;
 
 import java.util.Date;
-import java.util.List;
 
 @Data
 @DynamoDBTable(tableName = "Employer")
@@ -22,9 +21,6 @@ public class Employer {
 
     @DynamoDBAttribute
     private String mobileNumber;
-
-    @DynamoDBAttribute
-    private String password; // put it encrypted
 
     @DynamoDBAttribute
     private String companyName;

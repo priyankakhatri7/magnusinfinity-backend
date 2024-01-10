@@ -25,10 +25,13 @@ public class Company {
     private String companyUrl;
 
     @DynamoDBAttribute
-    private String mobileNumber;
+    private String companyDomain;
 
     @DynamoDBAttribute
-    private String emailId;
+    private String primaryContactName;
+
+    @DynamoDBAttribute
+    private String primaryContactEmailId;
 
     @DynamoDBAttribute
     private List<String> locations;

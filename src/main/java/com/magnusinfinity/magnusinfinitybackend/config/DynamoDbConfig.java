@@ -42,6 +42,25 @@ public class DynamoDbConfig {
         return amazonDynamoDB;
     }
 
+//    @Bean
+//    public DynamoDbClient getDynamoDbClient() {
+//        AwsCredentialsProvider credentialsProvider =
+//                DefaultCredentialsProvider.builder()
+//                        .profileName("pratikpoc")
+//                        .build();
+//
+//        return DynamoDbClient.builder()
+//                .region(Region.US_EAST_1)
+//                .credentialsProvider(credentialsProvider).build();
+//    }
+
+//    @Bean
+//    public DynamoDbEnhancedClient getDynamoDbEnhancedClient() {
+//        return DynamoDbEnhancedClient.builder()
+//                .dynamoDbClient(amazonDynamoDB())
+//                .build();
+//    }
+
     @Bean
     public AWSCredentials amazonAWSCredentials() {
         return new BasicAWSCredentials(

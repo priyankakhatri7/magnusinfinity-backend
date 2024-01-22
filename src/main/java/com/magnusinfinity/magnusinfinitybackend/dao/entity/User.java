@@ -32,6 +32,15 @@ public class User {
     private String imageUrl;
 
     @DynamoDBAttribute
+    private String userType; //employer  candidate admin -> create enum
+    //employer -> profile page -> complete your employer profile
+    //candidate -> profile page -> complete your candidate profile. ->more details
+    //admin
+
+    @DynamoDBAttribute
+    private String companyName;
+
+    @DynamoDBAttribute
     private Boolean emailVerified = false;
 
     @DynamoDBAttribute
@@ -40,6 +49,7 @@ public class User {
     @DynamoDBTypeConvertedEnum
     private AuthProvider provider;
 
+    @DynamoDBAttribute
     private String providerId;
 
     @DynamoDBAttribute

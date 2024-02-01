@@ -70,14 +70,14 @@ public class TableConfig {
 
         try {
             amazonDynamoDB.describeTable("User");
-            amazonDynamoDB.deleteTable("User");
-            dynamoDBMapper = new DynamoDBMapper(amazonDynamoDB);
-            CreateTableRequest tableRequest = dynamoDBMapper
-                    .generateCreateTableRequest(User.class);
-            tableRequest.setProvisionedThroughput(
-                    new ProvisionedThroughput(1L, 1L));
-            tableRequest.getGlobalSecondaryIndexes().get(0).setProvisionedThroughput(new ProvisionedThroughput(1L, 1L));
-            amazonDynamoDB.createTable(tableRequest);
+//            amazonDynamoDB.deleteTable("User");
+//            dynamoDBMapper = new DynamoDBMapper(amazonDynamoDB);
+//            CreateTableRequest tableRequest = dynamoDBMapper
+//                    .generateCreateTableRequest(User.class);
+//            tableRequest.setProvisionedThroughput(
+//                    new ProvisionedThroughput(1L, 1L));
+//            tableRequest.getGlobalSecondaryIndexes().get(0).setProvisionedThroughput(new ProvisionedThroughput(1L, 1L));
+//            amazonDynamoDB.createTable(tableRequest);
         } catch (Exception e){
             dynamoDBMapper = new DynamoDBMapper(amazonDynamoDB);
             CreateTableRequest tableRequest = dynamoDBMapper
